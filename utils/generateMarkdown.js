@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== "none") {
-    return `${license}`;
+    return `6. [Questions](#questions)`;
   }  return '';
 }
 
@@ -20,20 +20,18 @@ function renderLicenseLink(license) {
 // function renderLicenseSection(license) {
 function renderLicenseSection(license) {
   if (license !== "none") {
-    return `${license}`;
+    return `## License
+    This project is licensed under the ${license} license.`;
   }  return '';
   }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  // const licenseBadge = renderLicenseBadge(data.license);
-  // const licenseLink = renderLicenseLink(data.license);
-  // const licenseSection = renderLicenseSection(data.license);
 
   const githubLink = `https://github.com/${data.username}`;
 
   return `# ${data.projectname}
-${licenseBadge}
+${renderLicenseBadge(data.license)}
 
 ## Description
 ${data.description}
@@ -41,10 +39,10 @@ ${data.description}
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
-3. [License](#license)
-4. [Contribute](#contribute)
-5. [Tests](#tests)
-6. [Questions](#questions)  
+3. [Contribute](#contribute)
+4. [Tests](#tests)
+5. [Questions](#questions)
+${renderLicenseLink(data.license)}
 
 ## Installation
 To install the necessary dependencies, run the following command:
@@ -52,9 +50,6 @@ ${data.cmddependencies}
 
 ## Usage
 ${data.userepo}
-
-## License
-This project is licensed under the ${licenseSection} license.
 
 ## Contribute
 ${data.contribute}
@@ -65,6 +60,8 @@ ${data.cmdtests}
 
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.username}](${githubLink}).
+
+${renderLicenseSection(data.license)}
 `;
 }
 
