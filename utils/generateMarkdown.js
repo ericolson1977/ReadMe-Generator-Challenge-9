@@ -19,18 +19,18 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license) {
-    return ``;
-  }
-  return '';
-}
+// function renderLicenseSection(license) {
+//   if (license) {
+//     return ``;
+//   }
+//   return '';
+// }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
-  const licenseSection = renderLicenseSection(data.license);
+  // const licenseSection = renderLicenseSection(data.license);
 
   const githubLink = `https://github.com/${data.username}`;
 
@@ -49,7 +49,7 @@ ${data.description}
 6. [Questions](#questions)  
 
 ## Installation
-To install the necessary dependecies, run the following command:
+To install the necessary dependencies, run the following command:
 ${data.cmddependencies}
 
 ## Usage
