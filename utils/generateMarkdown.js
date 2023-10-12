@@ -2,7 +2,8 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license) {
-    return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](LICENSE)`;
+    const licenseSlug = license.replace(/ /g, '_');
+    return `![License](https://img.shields.io/badge/License-${licenseSlug}-blue)`;
   }
   return '';
 }
@@ -11,7 +12,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license) {
-    return `[License](LICENSE)`;
+    return `${license}`;
   }
   return '';
 }
@@ -20,7 +21,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-    return `This project is licensed under the ${license} license. See the [${license}](LICENSE) file for more details.`;
+    return ``;
   }
   return '';
 }
@@ -30,33 +31,34 @@ function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
   const licenseSection = renderLicenseSection(data.license);
+
+  const githubLink = `https://github.com/${data.username}`;
+
   return `# ${data.projectname}
+${licenseBadge}
 
 ## Description
 ${data.description}
-
-${licenseBadge}
 
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [License](#license)
-4. [How to Contribute](#howtocontribute)
+4. [Contribute](#contribute)
 5. [Tests](#tests)
 6. [Questions](#questions)  
 
 ## Installation
 To install the necessary dependecies, run the following command:
-${data.cmddependecies}
+${data.cmddependencies}
 
 ## Usage
 ${data.userepo}
 
 ## License
-${licenseSection}
-For the full license text, please see [${licenseLink}](LICENSE).
+This project is licensed under the ${licenseLink} license.
 
-## How to Contribute
+## Contribute
 ${data.contribute}
 
 ## Tests
@@ -64,7 +66,7 @@ To run tests, run the following command:
 ${data.cmdtests}
 
 ## Questions
-if you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at ${data.username}.
+if you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.username}](${githubLink}).
 `;
 }
 
