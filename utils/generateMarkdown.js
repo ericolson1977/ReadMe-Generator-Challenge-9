@@ -1,35 +1,33 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license) {
+  if (license !== "none") {
     const licenseSlug = license.replace(/ /g, '_');
     return `![License](https://img.shields.io/badge/License-${licenseSlug}-blue)`;
-  }
-  return '';
+  }return '';
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license) {
+  if (license !== "none") {
     return `${license}`;
-  }
-  return '';
+  }  return '';
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 // function renderLicenseSection(license) {
-//   if (license) {
-//     return ``;
-//   }
-//   return '';
-// }
+function renderLicenseSection(license) {
+  if (license !== "none") {
+    return `${license}`;
+  }  return '';
+  }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const licenseBadge = renderLicenseBadge(data.license);
-  const licenseLink = renderLicenseLink(data.license);
+  // const licenseBadge = renderLicenseBadge(data.license);
+  // const licenseLink = renderLicenseLink(data.license);
   // const licenseSection = renderLicenseSection(data.license);
 
   const githubLink = `https://github.com/${data.username}`;
@@ -56,7 +54,7 @@ ${data.cmddependencies}
 ${data.userepo}
 
 ## License
-This project is licensed under the ${licenseLink} license.
+This project is licensed under the ${licenseSection} license.
 
 ## Contribute
 ${data.contribute}
@@ -66,7 +64,7 @@ To run tests, run the following command:
 ${data.cmdtests}
 
 ## Questions
-if you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.username}](${githubLink}).
+If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.username}](${githubLink}).
 `;
 }
 

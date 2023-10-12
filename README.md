@@ -1,8 +1,8 @@
-# readme generator 8
-![License](https://img.shields.io/badge/License-Mozilla_2.0-blue)
+# Readme Generator 2
+![License](https://img.shields.io/badge/License-None-blue)
 
 ## Description
-tsting
+I created a simple command line application to generate a high-quality README file. 
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -20,7 +20,7 @@ npm i
 n/a
 
 ## License
-This project is licensed under the Mozilla 2.0 license.
+This project is licensed under the None license.
 
 ## Contribute
 n/a
@@ -30,4 +30,4 @@ To run tests, run the following command:
 npm test
 
 ## Questions
-if you have any questions about the repo, open an issue or contact me directly at mr_tues_night@yahoo.com. You can find more of my work at [ericolson1977](https://github.com/ericolson1977).
+If you have any questions about the repo, open an issue or contact me directly at mr_tues_night@yahoo.com. You can find more of my work at [ericolson1977](https://github.com/ericolson1977).
