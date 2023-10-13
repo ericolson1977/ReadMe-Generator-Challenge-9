@@ -43,7 +43,7 @@ ${data.description}
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
-3. [Contribute](#contribute)
+3. [Contributing](#contributing)
 4. [Tests](#tests)
 5. [Questions](#questions)
 ${renderLicenseLink(data.license)}
