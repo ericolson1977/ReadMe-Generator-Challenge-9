@@ -22,7 +22,7 @@ Inquirer version 8.2.4 was used.
 
 https://github.com/ericolson1977/ReadMe-Generator-Challenge-9
 
-![Alt text](image.png)
+https://drive.google.com/file/d/14z2553APDw2cGeZGACc02emPw4F_c3We/view
 
 
 ## Contributing
