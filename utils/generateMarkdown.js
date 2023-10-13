@@ -51,7 +51,7 @@ To install the necessary dependencies, run the following command:
 ## Usage
 ${data.userepo}
 
-## Contribute
+## Contributing
 ${data.contribute}
 
 ## Tests
