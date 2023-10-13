@@ -1,39 +1,34 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// this function compares the user input from the license type and returns the appropriate license badge. if the user selected "None" from the license, no badge is displayed.
 function renderLicenseBadge(license) {
   if (license === "Apache 2.0") {
     return `![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)`;
   } else if (license === "MIT") {
     return `![License](https://img.shields.io/badge/License-MIT-yellow.svg)`;
   } else if (license === "Boost 1.0") {
-      return `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`;
+    return `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`;
   } else if (license === "ISC") {
-      return `![License](https://img.shields.io/badge/License-ISC-blue.svg)`;
-  }return '';
+    return `![License](https://img.shields.io/badge/License-ISC-blue.svg)`;
+  } return '';
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// this function compares the user input from the license type. if any license is selcted, the table of contents line renders. if "None" license is selected, this table of contents line is left off.
 function renderLicenseLink(license) {
   if (license !== "None") {
     return `6. [License](#license)`;
-  }  return '';
+  } return '';
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection(license) {
+// this function compares the user input from the license type. if any license is selcted, the license section renders. if "None" license is selected, this section is left off.
 function renderLicenseSection(license) {
   if (license !== "None") {
     return `## License
   This project is licensed under the ${license} license.`;
-  }  return '';
-  }
+  } return '';
+}
 
+// this function renders all the data into a framework fo the markdown file. 
 function generateMarkdown(data) {
-
   const githubLink = `https://github.com/${data.username}`;
-
   return `# ${data.projectname}
 ${renderLicenseBadge(data.license)}
 
@@ -71,4 +66,5 @@ ${renderLicenseSection(data.license)}
 `;
 };
 
+// this exports the generateMarkdown function to the init function. 
 module.exports = generateMarkdown;

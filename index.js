@@ -3,6 +3,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const { log } = require('console');
 
+// created an array of questions stored in a const
 const questions = [
     {
         type: 'input',
@@ -55,6 +56,7 @@ const questions = [
 
 ];
 
+// this function starts the questions in the command line, this also grabs the data from the generateMarkdown function and finally creates the README.md file
 function init() { 
     inquirer
   .prompt(questions)
@@ -70,4 +72,5 @@ function init() {
     });
 }
 
+// this call the init function
 init();
