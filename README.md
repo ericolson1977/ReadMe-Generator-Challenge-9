@@ -1,8 +1,8 @@
-# Readme Generator 3
-![License](https://img.shields.io/badge/License-APACHE_2.0-blue)
+# Readme Generator 7.0
+
 
 ## Description
-readme generator
+I am tired of testing this
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -10,11 +10,12 @@ readme generator
 3. [Contribute](#contribute)
 4. [Tests](#tests)
 5. [Questions](#questions)
-6. [Questions](#questions)
+
 
 ## Installation
 To install the necessary dependencies, run the following command:
-npm i
+    
+    npm i
 
 ## Usage
 n/a
@@ -24,10 +25,10 @@ n/a
 
 ## Tests
 To run tests, run the following command:
-npm test
+    
+    npm test
 
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at mr_tues_night@yahoo.com. You can find more of my work at [ericolson1977](https://github.com/ericolson1977).
 
-## License
-    This project is licensed under the APACHE 2.0 license.
+
