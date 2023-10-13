@@ -1,8 +1,8 @@
-# Readme Generator 7.0
+# this is it
 
 
 ## Description
-I am tired of testing this
+last test and then we turn in
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -29,6 +29,6 @@ To run tests, run the following command:
     npm test
 
 ## Questions
-If you have any questions about the repo, open an issue or contact me directly at mr_tues_night@yahoo.com. You can find more of my work at [ericolson1977](https://github.com/ericolson1977).
+If you have any questions about the repo, open an issue or contact me directly at lastone@finally.com. You can find more of my work at [ericolson1977](https://github.com/ericolson1977).
 
 
